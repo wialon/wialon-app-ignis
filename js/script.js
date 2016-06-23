@@ -56,7 +56,7 @@
 			url = getHtmlVar("hostUrl");
 		}
 		if(!url) {
-			url = window.location.protocol + '//hst-api.wialon.com';
+			url = 'https://hst-api.wialon.com';
 		}
 
 		var params = {
@@ -133,7 +133,7 @@
 		cur = cur.replace(/\&{0,1}(sid|token|authHash|access_hash|access_token)=\w*/g, '');
 		cur = cur.replace(/[\?\&]*$/g, '');
 
-		var url = window.location.protocol + '//' + config.homeUrl + '/login.html?client_id=' + config.name + '&lang=' + lang + '&duration=3600&redirect_uri=' + encodeURIComponent(cur);
+		var url = config.homeUrl + '/login.html?client_id=' + config.name + '&lang=' + lang + '&duration=3600&redirect_uri=' + encodeURIComponent(cur);
 
 		window.location.href = url;
 	}
